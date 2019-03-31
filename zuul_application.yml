@@ -1,6 +1,7 @@
 spring:
   profiles:
     active: dev
+
 ---
 server:
   port: 9527
@@ -21,6 +22,9 @@ zuul:
   routes:
     plat.serviceId: plat-service
     plat.path: /plat/**
+    product.serviceId: product-service
+    product.path: /product/**
+
 ---
 server:
   port: 9528
@@ -41,3 +45,5 @@ zuul:
   routes:
     plat.serviceId: plat-service
     plat.path: /plat/**
+    product.serviceId: product-service
+    product.path: /product/**
